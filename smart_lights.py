@@ -2,6 +2,7 @@ from phue import Bridge
 from ip_address import bridge_ip_address
 import time
 
+# function to connect to the flash light
 def access_lights(bridge_ip_address):
     b = Bridge(bridge_ip_address)
     light_names_list = b.get_light_objects('name')
@@ -14,6 +15,7 @@ def film_lights():
         lights[light].hue = 7000
         lights[light].saturation = 100
 
+# function to flash the lights
 def danger_mode():
     lights = access_lights(bridge_ip_address)
     while True:
@@ -21,7 +23,7 @@ def danger_mode():
         for light in lights:
             lights[light].on = True
             lights[light].hue = 180
-            lights[light].saturation = 100
+            lights[light].saturation = 100  #change the warmth of the colors of light
         time.sleep(1)
         for light in lights:
             lights[light].on = True
