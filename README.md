@@ -4,7 +4,7 @@
 
 pip3 install phue
 
-## Smart ligh Info
+## Smart light Info
 I used a Syska Smart Light in this case.
 
 Product link:
